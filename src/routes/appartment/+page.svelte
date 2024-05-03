@@ -166,7 +166,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url('static/image.png');
+        background-image: url('https://imgur.com/M5qW9vs.jpg');
         background-size: cover;
         filter: brightness(150%) blur(5px); 
         z-index: -1; 
