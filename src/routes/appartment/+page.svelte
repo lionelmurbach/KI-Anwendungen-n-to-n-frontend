@@ -160,22 +160,22 @@
   <div class="background"></div>
 
   <style>
-	.background {
-	  position: fixed;
-	  top: 0;
-	  left: 0;
-	  width: 100%;
-	  height: 100%;
-	  background-image: url('image.png'); 
-	  background-size: cover;
-	  filter: brightness(150%) blur(5px); 
-	  z-index: -1; 
-	}
-  
-	.content {
-	  position: relative;
-	  z-index: 1;
-	  padding: 20px;
-	  color: white;
-	}
-  </style>
+    .background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('static/image.png');
+        background-size: cover;
+        filter: brightness(150%) blur(5px); 
+        z-index: -1; 
+    }
+
+    .content {
+        position: relative;
+        z-index: 1;
+        padding: 20px;
+        color: white;
+    }
+</style>
