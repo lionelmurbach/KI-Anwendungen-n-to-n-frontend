@@ -128,29 +128,54 @@
         });
 	}
 </script>
-<div class="container text-center">
+<div class="container d-flex justify-content-center align-items-center vh-100">
 
-	<h1>Are you paying to much? Our model predicts that you should be paying {price}</h1>
-
-	<div class="row justify-content-md-center">
-	  <div class="col col-lg-2">
-		<input type="number" class="form-control" placeholder="area" aria-label="area" bind:value={area}>
-	  </div>
-	  <div class="col col-lg-2">
-		<input type="number" class="form-control" placeholder="rooms" aria-label="rooms" bind:value={rooms}>
-	  </div>
-	  <div class="col col-lg-2">
-
-		<select class="form-select" bind:value={selected}>
+	<div class="text-center">
+	  <h1>Are you paying too much? Our model predicts that you should be paying {price}</h1>
+  
+	  <div class="row justify-content-center">
+		<div class="col col-lg-2">
+		  <input type="number" class="form-control" placeholder="area" aria-label="area" bind:value={area}>
+		</div>
+		<div class="col col-lg-2">
+		  <input type="number" class="form-control" placeholder="rooms" aria-label="rooms" bind:value={rooms}>
+		</div>
+		<div class="col col-lg-2">
+		  <select class="form-select" bind:value={selected}>
 			{#each bfs_number_names as bfs}
-				<option value={bfs}>
-					{bfs.name}
-				</option>
+			  <option value={bfs}>
+				{bfs.name}
+			  </option>
 			{/each}
-		</select>
-	  </div>
-	  <div class="col-md-auto">
-		<button type="button" class="btn btn-primary" on:click={handleSubmit}>price estimation</button>
+		  </select>
+		</div>
+		<div class="col-md-auto">
+		  <button type="button" class="btn btn-primary" on:click={handleSubmit}>Price Estimation</button>
+		</div>
 	  </div>
 	</div>
+	
   </div>
+
+  <div class="background"></div>
+
+  <style>
+	.background {
+	  position: fixed;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	  background-image: url('image.png'); 
+	  background-size: cover;
+	  filter: brightness(150%) blur(5px); 
+	  z-index: -1; 
+	}
+  
+	.content {
+	  position: relative;
+	  z-index: 1;
+	  padding: 20px;
+	  color: white;
+	}
+  </style>
